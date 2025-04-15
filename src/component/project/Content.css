@@ -1,0 +1,20 @@
+.intro{
+    width: 52rem;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+#intro-container{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 576px){
+    .intro{
+        margin: 3rem 1rem;
+    }
+}
