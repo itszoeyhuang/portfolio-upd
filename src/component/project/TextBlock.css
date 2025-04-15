@@ -1,0 +1,13 @@
+.challenge{
+    width: 50rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 6rem;
+}
+
+#challenge-container{
+    display: flex;
+    justify-content: center;
+}

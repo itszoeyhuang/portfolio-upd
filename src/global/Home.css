@@ -1,0 +1,89 @@
+.container-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 20rem;
+    padding-top: 3rem;
+}
+
+.mark1{
+    align-items: center;
+    width: 20rem;
+    transform: scale(1,-1);
+    position:absolute;
+    margin-left: -50px;
+    margin-bottom: -50px;
+}
+
+.mark2{
+    width: 20rem;
+    transform: scale(-1,1);
+    position:absolute;
+    margin-right: -50px;
+    margin-top: -50px;
+}
+
+.hero-intro{
+    padding-top: 3rem;
+}
+
+.intro-line{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    gap: 10px;
+}
+
+.emphasis{
+    font-family: "FONTSPRING DEMO - Integral CF Bold";
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.btn{
+    background-color: #F6F2EC;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 2rem;
+    margin-bottom: 5rem;
+}
+
+.btn-text{
+    color: #2E1E1B;
+}
+
+/* Projects */
+.project{
+    margin: 0 1rem;
+    padding: 4rem 0;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 576px){
+    .title{
+        padding-top: 5rem;
+    }
+    .hero-intro{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        max-width: 90%;
+        margin: auto;
+        padding: 1.5rem;
+    }
+}

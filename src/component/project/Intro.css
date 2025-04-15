@@ -1,0 +1,61 @@
+.project-intro{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+
+/* Left Text */
+.project_text{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro_title h1{
+    word-spacing: 20px;
+    margin-bottom: 2rem;
+}
+
+.intro_title h5{
+    margin-bottom: 1.7rem;
+}
+
+.intro_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 4.5rem;
+}
+
+.intro_solution{
+    padding-bottom: 3rem;
+}
+
+.line-container{
+    margin-bottom: 2.2rem;
+}
+
+/* Right Image */
+.project-dribble img{
+    width: 50rem;
+    height: 50rem;
+    object-fit:cover;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 576px){
+    .project-intro{
+        display: flex;
+        flex-direction: column;
+    }
+    .intro-title h1{
+        width: 10px;
+        height: auto;
+    }
+    .project-dribble{
+        width: auto;
+        height: 35rem;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,10 @@
+.site-footer{
+    margin-top: auto;
+    padding: 2rem 0;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
