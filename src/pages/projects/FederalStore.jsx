@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router'
+import { Link } from 'react-router';
 import ScrollToTop from "react-scroll-to-top";
 
 import Intro from "../../component/project/Intro";
@@ -17,7 +17,7 @@ import FederalWireframe4 from '../../assets/images/the-federal-store/wireframe4.
 import FederalWireframe5 from '../../assets/images/the-federal-store/wireframe5.jpg'
 import IntroLunchLady from '../../assets/images/the-lunch-lady/intro.jpg'
 import DribblePetApp from '../../assets/images/pet-app/dribble.jpg'
-import { path } from "framer-motion/client";
+import { link, path } from "framer-motion/client";
 
 export default function FederalStore(){
     return(
