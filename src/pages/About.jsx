@@ -49,7 +49,7 @@ export default function About(){
                 <div className="about-right">
                     <div className="col-9">
                         <div className="heading">
-                            <h1>
+                            <h1 className="about-title">
                                 <div style={{}}>
                                     <DecryptedText
                                     text="ABOUT ME"
@@ -73,8 +73,8 @@ export default function About(){
                             <p>A indoor plant collector and crazy in love with my 15 year old Maltese. 🐶</p>
                         </div>
                         <div className="heading">
-                            <h1>
-                            <div style={{}}>
+                            <h1 className="about-title">
+                            <div style={{ }}>
                                 <DecryptedText
                                 text="EXPERIENCE"
                                 speed={60}
@@ -86,7 +86,7 @@ export default function About(){
                                 encryptedClassName="encrypted"
                                 sequential="false"
                                 />
-                                </div>
+                            </div>
                             </h1>
                         </div>
                         <div className="content">
@@ -95,7 +95,7 @@ export default function About(){
                             <p>Additionally, I gained valuable insights into consumer behaviour and visual storytelling which deepened my understanding of how aesthetics and functionality intersect.  This inspired me to focus on creating engaging user experience through tech-world.</p>
                         </div>
                         <div className="heading">
-                            <h1>
+                            <h1 className="about-title">
                             <div style={{}}>
                                 <DecryptedText
                                 text="FUTURE VISION"
@@ -117,7 +117,7 @@ export default function About(){
                             <p>I want to be someone who helps turn ideas into interfaces — bridging the gap between vision and execution. Whether it’s a minimal e-commerce shop or an experimental digital portfolio.</p>
                         </div>
                         <div className="heading">
-                            <h1>
+                            <h1 className="about-title">
                                 <div style={{}}>
                                     <DecryptedText
                                     text="TOOL KITS"

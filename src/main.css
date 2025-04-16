@@ -25,7 +25,6 @@ p {
   font-weight: 400; 	
 }
 
-
 /* Root Styles */
 :root{
     font-family: "Montserrat", sans-serif;
@@ -33,6 +32,10 @@ p {
     color-scheme: light dark;
     color: #F6F2EC;
     background-color: #2E1E1B;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Grid System */
