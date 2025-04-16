@@ -63,4 +63,9 @@
     .about-btn{
         display: none;
     }
+    .profile-pic{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
 }

@@ -188,3 +188,13 @@
     animation: hero-gradient-animation 3s infinite alternate-reverse;
     background-blend-mode: overlay, normal, normal, normal, normal;
 }
+
+@media screen and (max-width: 576px){
+    .gradient-background{
+        width: 100vw;
+        height: 100vh;
+    }
+    .title h1{
+        font-size: 3rem;
+    }
+}

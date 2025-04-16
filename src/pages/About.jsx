@@ -96,6 +96,28 @@ export default function About(){
                         </div>
                         <div className="heading">
                             <h1>
+                            <div style={{}}>
+                                <DecryptedText
+                                text="FUTURE VISION"
+                                speed={60}
+                                maxIterations={10}
+                                characters="ABCDEFGHIJKLMNOPQRSTUV123567890"
+                                animateOn="view"
+                                revealDirection="start"
+                                parentClassName="all-letters"
+                                encryptedClassName="encrypted"
+                                sequential="false"
+                                />
+                                </div>
+                            </h1>
+                        </div>
+                        <div className="content">
+                            <p>My goal is to build beautiful, functional websites, especially for small labels, creatives, and independent artists who need a strong online presence but might not have the technical resources to create one.</p>
+                            <br />
+                            <p>I want to be someone who helps turn ideas into interfaces — bridging the gap between vision and execution. Whether it’s a minimal e-commerce shop or an experimental digital portfolio.</p>
+                        </div>
+                        <div className="heading">
+                            <h1>
                                 <div style={{}}>
                                     <DecryptedText
                                     text="TOOL KITS"
