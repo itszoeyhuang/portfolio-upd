@@ -1,3 +1,76 @@
+.gradient-background {
+    position: relative;
+    width: 100%;
+    /* width: calc(100vw-105px); */
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    --c-0: hsla(45, 100%, 50%, 1);
+    --x-0: 0%;
+    --y-0: 99%;
+    --c-1: hsla(283.27868852459017, 100%, 23%, 0);
+    --y-1: 95%;
+    --x-1: 93%;
+    --x-2: 89%;
+    --c-2: hsla(9.473684210526315, 26%, 14%, 1);
+    --y-2: 8%;
+    --x-3: 89%;
+    --c-3: hsla(7.751196172248804, 89%, 54%, 1);
+    --y-3: 8%;
+    background-color: hsla(7.751196172248804, 89%, 54%, 1);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1500 1500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3));
+    animation: hero-gradient-animation 3s infinite alternate-reverse;
+    background-blend-mode: overlay, normal, normal, normal, normal;
+}
+
+.custom-cursor {
+  width: 0.1rem;
+  line-break: auto;
+  padding: 8px 16px;
+  border-radius: 10%;
+  font-size: 16px;
+  color: #fff;
+  /* white-space: nowrap; */
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.3); */
+}
+
+.title, .gradient-content{
+    position: relative;
+    z-index: 1;
+}
+
+.gradient-background {
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+}
+
+.arrow-down{
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #F6F2EC;
+    border-radius: 10%;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;               /* you can tweak this to cover more or less */
+  pointer-events: none;
+
+  transition: opacity 0.3s ease-in-out;
+}
 @keyframes hero-gradient-animation {
     0% {
         --c-0: hsla(45, 100%, 50%, 1);
@@ -164,29 +237,6 @@
     syntax: '<percentage>';
     inherits: false;
     initial-value: 8%
-}
-
-.gradient-background {
-    width: calc(100vw-105px);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    --c-0: hsla(45, 100%, 50%, 1);
-    --x-0: 0%;
-    --y-0: 99%;
-    --c-1: hsla(283.27868852459017, 100%, 23%, 0);
-    --y-1: 95%;
-    --x-1: 93%;
-    --x-2: 89%;
-    --c-2: hsla(9.473684210526315, 26%, 14%, 1);
-    --y-2: 8%;
-    --x-3: 89%;
-    --c-3: hsla(7.751196172248804, 89%, 54%, 1);
-    --y-3: 8%;
-    background-color: hsla(7.751196172248804, 89%, 54%, 1);
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1500 1500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3));
-    animation: hero-gradient-animation 3s infinite alternate-reverse;
-    background-blend-mode: overlay, normal, normal, normal, normal;
 }
 
 @media screen and (max-width: 576px){

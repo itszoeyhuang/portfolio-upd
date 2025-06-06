@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'motion/react'
 import { Routes, Route } from 'react-router'
 
 import PageWrap from './global/PageWrap'
@@ -16,7 +17,7 @@ function App() {
 
   // Logic
 
-  // HTML
+  // HTML~
   return (
     <>
       <Routes>

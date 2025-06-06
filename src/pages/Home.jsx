@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {} from 'react'
 import { Link } from 'react-router'
 import { Fade} from "react-awesome-reveal"
 import FlowingMenu from '../component/FlowingMenu'

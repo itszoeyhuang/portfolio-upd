@@ -1,5 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Arrow from "./Arrow";
+
+import '../component/ProjectItem.css'
 
 export default function ProjectItemA({order, images, title, description, skills, url}) {
     return(
@@ -11,13 +14,30 @@ export default function ProjectItemA({order, images, title, description, skills,
                 {/* Images */}
                 <div className="side-content">
                     <div className="dribbleA">
+                        {images.map((img, index) => (
+                        <div key={index} className={`dribbleA-${index + 1} image-zoom-wrapper`}>
+                            <motion.img
+                                src={img.src}
+                                alt={img.alt}
+                                id={img.id}
+                                className="zoomable-image"
+                                whileHover={{ scale: 1.08 }}
+                                transition={{ duration: 0.2 }}
+                            />
+                        </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* <div className="side-content">
+                    <div className="dribbleA">
                             {images.map((img, index) => (
                                 <div key={index} className={`dribbleA-${index + 1}`}>
                                     <img src={img.src} alt={img.alt} id={img.id} />
                                 </div>
                             ))}
                     </div>
-                </div>
+                </div> */}
                 {/* Title & Skills */}
                 <div className="side-content_2">
                     <div className="project-title">
