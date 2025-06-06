@@ -1,0 +1,39 @@
+/* .section-blur-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.section-blur-wrap::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  width: 90%;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  filter: blur(60px);
+  border-radius: 40px;
+  z-index: -1;
+  pointer-events: none;
+} */
+
+.page-bottom-blur {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100px;
+  z-index: 50;
+  pointer-events: none;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 1;
+  transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
+}
+
+.page-bottom-blur.hidden {
+  opacity: 0;
+}

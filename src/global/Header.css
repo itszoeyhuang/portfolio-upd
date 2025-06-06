@@ -21,9 +21,14 @@ body{
 }
 
 .site-header{
-    display: flex;
-    align-items: center;
+    position: fixed;
     padding: 2rem 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* background-color: black; Or your theme */
+    transition: transform 0.1s ease-in-out;
 }
 
 .grid{
