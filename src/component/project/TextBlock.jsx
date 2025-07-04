@@ -13,10 +13,10 @@ export default function TextBlock({heading, content}){
                     </div>
                     <Line className="line" width={400} color="#F6F2EC" />
                     <div className="challenge_content">
-                        {Array.isArray(content) ? (
+                            {Array.isArray(content) ? (
                             content.map((paragraph, index) => <p key={index}>{paragraph}</p>)
                             ) : (
-                            <p>{content}</p> 
+                                <p>{content}</p>
                             )}
                     </div>
                 </div>

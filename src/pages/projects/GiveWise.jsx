@@ -7,9 +7,16 @@ import Content from "../../component/project/Content";
 import Video from "../../component/project/Video";
 import TextBlock from "../../component/project/TextBlock";
 import Line from "../../component/Line";
+import Wireframes from "../../component/project/Wireframes";
 
 import DribbleGiveWise from '../../assets/images/givewise/dribble.png'
 import VideoGiveWise from '../../../public/video/givewise.mp4'
+import GiveWiseNavBar from '../../assets/images/givewise/nav-bar.png'
+import GiveWiseSiteMap from '../../assets/images/givewise/site-map.png'
+import GiveWiseLowFi1 from '../../assets/images/givewise/lowfi-1.png'
+import GiveWiseLowFi2 from '../../assets/images/givewise/lowfi-2.png'
+import GiveWiseLowFi3 from '../../assets/images/givewise/lowfi-3.png'
+import GiveWiseLowFi4 from '../../assets/images/givewise/lowfi-4.png'
 
 export default function GiveWise(){
     return(
@@ -22,6 +29,10 @@ export default function GiveWise(){
             ]}
             listTitle="What We Did"
             listItems={["Figma", "Framer","HTML", "CSS", "JS"]}
+            roleTitle="Role"
+            roleItems={["UX/UI Designer", "Project Manager", "Front-end Developer"]}
+            durationTitle="Duration"
+            durationItems={["7 weeks"]}
             img={{ 
                 src: DribbleGiveWise, 
                 alt: "GiveWise Dribble Image", 
@@ -33,11 +44,6 @@ export default function GiveWise(){
             "The idea for the project was inspired by all of our personal budgeting experiences. It began with Mor wanting a feature for simple charitable donations, while Sally and I had both used smart budgeting apps, which influenced our focus on user-friendly smart financial budgeting interface. We also followed Agile Methodology to refine ideas through sprints and feedback session weekly."
         ]}
         />
-        <TextBlock 
-            heading="My Role"
-            content="Responsible for UX/UI aspect and the web developing aspect. As for Sally focus on UX/UI design as well, and Mor was the Graphic Designer."
-        />
-        <Video src={VideoGiveWise}/>
         <Content
             heading="User Research & IA Structure"
             content={[
@@ -45,6 +51,21 @@ export default function GiveWise(){
             "Most of the research and design work was conducted using Figma. The structure was designed to facilitate easy navigation, allowing users to link bank accounts, track expenses, and manage charitable donations within our wireframe."
         ]}
         />
+        <Wireframes 
+            images={[
+                { src: GiveWiseNavBar, alt:"GiveWise App Navigation Bar", caption: "Navigation Bar"},
+                { src: GiveWiseSiteMap, alt:"GiveWise App Site Map", caption: "Site Map"},
+            ]}
+        />
+        <Wireframes 
+            images={[
+                { src: GiveWiseLowFi1, alt:"GiveWise App Wireframe", caption: "Home Page"},
+                { src: GiveWiseLowFi2, alt:"GiveWise App Wireframe", caption: "Profile Page"},
+                { src: GiveWiseLowFi3, alt:"GiveWise App Wireframe", caption: "Profile Tracking Page"},
+                { src: GiveWiseLowFi4, alt:"GiveWise App Wireframe", caption: "Donation Page"},
+            ]}
+        />
+        <Video src={VideoGiveWise}/>
         <Content 
             heading="Wireframe & Implementation"
             content={[

@@ -18,6 +18,8 @@ import PetWireframe3 from '../../assets/images/pet-app/wireframe3.png'
 import PetWireframe4 from '../../assets/images/pet-app/wireframe4.png'
 import PetWireframe5 from '../../assets/images/pet-app/wireframe5.png'
 import PetWireframe6 from '../../assets/images/pet-app/wireframe6.png'
+import PetEmpathyMap from '../../assets/images/pet-app/empathy-map.jpg'
+import PetUserFlow from '../../assets/images/pet-app/userflow.jpg'
 
 export default function PetApp(){
     return(
@@ -26,15 +28,25 @@ export default function PetApp(){
             title="THE PET DATING APP DESIGN"
             subtitle="A community where every dog finds a friend."
             content={[
-                "The project aims to create a platform that help dog owners to find compatible playdates for their pets in the new environment. Borrowing from my personal experience to create a safer place for dog owners!",
-                "As a pet owner, this is a project I have always been passionate about creating - priorities the functionality and user experience in for ease of use and safety, I have also identified some noticeable gap in the market through the researching."
+                "This project explores a mobile platform that helps dog owners connect and schedule compatible playdates for their pets in a new environment.",
+                "This app is designed to help dog owners connect with like-minded individuals and schedule safe, enjoyable playdates for their pets inspired by my personal experience in daily life."
             ]}
             listTitle="What I Did"
             listItems={["Figma"]}
+            roleTitle="Role"
+            roleItems={["UX/UI Designer"]}
+            durationTitle="Duration"
+            durationItems={["4 weeks"]}
             img={{ 
                 src: DribblePetApp, 
                 alt: "The Pet Dating App Dribble Image", 
                 id: "dribble-petapp" }} 
+        />
+        <Content
+            heading="Project Overview"
+            content={[
+            "The idea stemmed from my personal experience with my dog's certain breed/colour preference, sparking the concept of a platform that connects all dog breeds and fosters a more friendly community for pet owners."
+            ]}
         />
         <Content
             heading="Brainstorming & User Research"
@@ -45,12 +57,8 @@ export default function PetApp(){
         />
         <Wireframes 
             images={[
-                { src: PetWireframe1, alt:"The Pet Dating App Wireframe",id:"pet-app-wireframe-1"},
-                { src: PetWireframe2, alt:"The Federal Store Wireframe",id:"pet-app-wireframe-2"},
-                { src: PetWireframe3, alt:"The Federal Store Wireframe",id:"pet-app-wireframe-3"},
-                { src: PetWireframe4, alt:"The Federal Store Wireframe",id:"pet-app-wireframe-4"},
-                { src: PetWireframe5, alt:"The Federal Store Wireframe",id:"pet-app-wireframe-5"},
-                { src: PetWireframe6, alt:"The Federal Store Wireframe",id:"pet-app-wireframe-6"}
+                { src: PetEmpathyMap, alt:"The Pet Dating App Empathy Map", caption: "Empathy Map"},
+                { src: PetUserFlow, alt:"The Federal Store User Flow", caption: "User Flow"}
             ]}
         />
         <Content
@@ -59,11 +67,20 @@ export default function PetApp(){
             "With a clear understanding of user needs and goals, I first created the low-fi wireframes outlining the structure of a “dating” app then modifying to a more pet-focused functionality – profile signup, playmate browsing, setting up playdates, and community board with events around. A group of user testing was done throughout the prototype building additionally.",
             ]}
         />
+        <Wireframes 
+            images={[
+                { src: PetWireframe1, alt:"The Pet Dating App Wireframe", caption: "User Profile Setup"},
+                { src: PetWireframe3, alt:"The Federal Store Wireframe", caption: "User Profile Setup"},
+                { src: PetWireframe4, alt:"The Federal Store Wireframe", caption: "User Profile Setup"},
+                { src: PetWireframe5, alt:"The Federal Store Wireframe", caption: "User Profile Setup"},
+                { src: PetWireframe6, alt:"The Federal Store Wireframe", caption: "User Profile Setup"},
+                { src: PetWireframe2, alt:"The Federal Store Wireframe", caption: "User Profile Setup"},
+            ]}
+        />
         <TextBlock 
-            heading="Solutions"
+            heading="Solutions & Reflection"
             content={[
-                "Finaly, the hi-fi wireframes were developed with the brand core colours and visual elements. Google Map Integration was also implemented.",
-                "The final prototype was double tested to ensure all the functionalities worked smoothly and met user expectations."
+                "Finaly, the hi-fi wireframes were developed with the brand core colours and visual elements. Google Map Integration was also implemented. The final prototype was double tested to ensure all the functionalities worked smoothly and met user expectations.","Designing this app allowed me to explore how user empathy and personal experience can shape meaningful digital solutions. I realized how important it is to prioritize safety, comfort, and accessibility in community-based platforms."
             ]}
         />
         <Upcoming 

@@ -3,7 +3,7 @@ import Line from "../Line";
 
 import '../project/Intro.css'
 
-export default function Intro({ title, subtitle, content, listTitle, listItems, img = {} }){
+export default function Intro({ title, subtitle, content, roleTitle, roleItems, listTitle, listItems, durationTitle, durationItems, img = {} }){
     return(
         <>
         <div className="container">
@@ -23,15 +23,37 @@ export default function Intro({ title, subtitle, content, listTitle, listItems, 
                         <p>{content}</p> 
                         )}
                     </div>
-                    <div className="intro_solution">
-                        <h6>{listTitle}</h6>
-                        <ul>
-                            {listItems.map((item, index) => (
-                                <li key={index}>
-                                    <p>{item}</p>
-                                </li>
-                            ))}
-                        </ul>
+                    <div className="title_items">
+                        <div className="intro_solution">
+                            <h6>{roleTitle}</h6>
+                            <ul>
+                                {roleItems.map((item, index) => (
+                                    <li key={index}>
+                                        <p>{item}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="intro_solution">
+                            <h6>{listTitle}</h6>
+                            <ul>
+                                {listItems.map((item, index) => (
+                                    <li key={index}>
+                                        <p>{item}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="intro_solution">
+                            <h6>{durationTitle}</h6>
+                            <ul>
+                                {durationItems.map((item, index) => (
+                                    <li key={index}>
+                                        <p>{item}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="project-dribble">

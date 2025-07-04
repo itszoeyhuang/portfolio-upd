@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Skeleton, Box } from '@mui/material';
 
+import '../project/Video.css'
+
 export default function Video({ src }) {
   const [loaded, setLoaded] = useState(false);
   const videoRef = useRef(null);
@@ -26,31 +28,40 @@ export default function Video({ src }) {
   }, [loaded]);
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 640, margin: 'auto' }}>
-      {!loaded && (
-        <Skeleton
-          variant="rectangular"
-          animation="wave"
-          height={360}
-          sx={{ borderRadius: 2 }}
-        />
-      )}
-      <video
-        ref={videoRef}
-        width="100%"
-        height="360"
-        muted 
-        // controls
-        playsInline
-        style={{
-          display: loaded ? 'block' : 'none',
-          borderRadius: '16px',
-        }}
-        onLoadedData={() => setLoaded(true)}
-      >
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </Box>
+    <div className="video-container">
+      <Box sx={{ 
+          width: '100%', 
+          maxWidth: '100%', 
+          margin: 'auto', 
+          maxHeight: 'auto' 
+        }}>
+        {!loaded && (
+          <Skeleton
+            variant="rectangular"
+            animation="wave"
+            height={360}
+            sx={{ borderRadius: 2 }}
+          />
+        )}
+        <video
+          ref={videoRef}
+          width="100%"
+          // height="360"
+          muted 
+          // controls
+          playsInline
+          style={{
+            display: loaded ? 'block' : 'none',
+            borderRadius: '16px',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+          onLoadedData={() => setLoaded(true)}
+        >
+          <source src={src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </Box>
+    </div>
   );
 }
