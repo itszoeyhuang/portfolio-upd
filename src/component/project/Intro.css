@@ -29,6 +29,11 @@
     margin-bottom: 4.5rem;
 }
 
+.title_items{
+    display: flex;
+    gap: 6rem;
+}
+
 .intro_solution{
     padding-bottom: 3rem;
 }

@@ -1,4 +1,32 @@
-.wireframe{
+.wireframe-section{
+    padding: 2rem;
+}
+.wireframe-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.wireframe-card {
+  width: 280px;
+  text-align: center;
+}
+
+.wireframe-image {
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+}
+
+.wireframe-caption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #F6F2EC;
+}
+
+/* .wireframe{
     display: flex;
     justify-content: center;
     width: auto;
@@ -6,13 +34,14 @@
     object-fit: cover;
     margin: 0 auto;
     gap: 1rem;
-}
+    margin: 2rem 0;
+} */
 
 @media screen and (max-width: 576px){
-    .wireframe{
+    .wireframe-image{
         display: inline;
     }
-    .wireframe img{
+    .wireframe-image img{
         display: flex;
         width: auto;
         height: auto;

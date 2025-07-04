@@ -1,19 +1,21 @@
 import React from "react";
-
 import '../project/Wireframes.css'
 
 export default function Wireframes({ images }){
     return(
-        <> 
-            <div className="container">
-                <div className="wireframe">
-                    {images.map((img, index) => (
-                        <div key={index} className={`wireframe=${index + 1}`}>
-                            <img src={img.src} alt={img.alt} id={img.id} />
-                        </div>
-                    ))}
+        <section className="wireframe-section"> 
+                <div className="container">
+                    <div className="wireframe-grid">
+                        {images.map((img, index) => (
+                            <div className="wireframe-card" key={index}>
+                                <img src={img.src} alt={img.alt} className="wireframe-image" />
+                                {img.caption && (
+                                    <p className="wireframe-caption">{img.caption}</p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </>
+        </section>
     )
 }
