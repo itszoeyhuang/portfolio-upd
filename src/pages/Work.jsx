@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet";
 import ScrollToTop from "react-scroll-to-top";
 import ProjectItemA from "../component/ProjectItemA"
 import ProjectItemB from "../component/ProjectItemB"
@@ -21,6 +22,19 @@ import '../main.css'
 export default function Work(){
     return(
         <>
+        <Helmet>
+            <title>Work and Projects | Zoey Huang - Product Developer Portfolio</title>
+            <meta 
+                name="description" 
+                content="Explore projects by Zoey Huang from the New Media and Web Design Program at BCIT, including mobile redesigns, web development, app design and more." 
+            />
+            <meta property="og:title" content="Work and Projects | Zoey Huang - Product Developer Portfolio" />
+            <meta property="og:description" content="A collection of web and mobile design projects, including work in Figma, React.js, and more." />
+            <meta property="og:image" content={DribbleFederal} /> 
+            <meta property="og:url" content="https://www.itszoeyhuang.com/work" />
+            <link rel="canonical" href="https://www.itszoeyhuang.com/work" />
+        </Helmet>
+
         <div className="container">
             <div className="grid" id="hero-section" >
                 <div className="project-title" id="title_mobile-display" >

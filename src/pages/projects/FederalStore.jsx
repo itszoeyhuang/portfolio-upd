@@ -1,10 +1,10 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from 'react-router';
 import ScrollToTop from "react-scroll-to-top";
 import '../../../src/main.css'
 
 import Intro from "../../component/project/Intro";
-import Video from "../../component/project/Video";
 import Content from "../../component/project/Content";
 import Wireframes from "../../component/project/Wireframes";
 import TextBlock from "../../component/project/TextBlock";
@@ -30,11 +30,21 @@ import FederalLowFi1 from '../../assets/images/the-federal-store/low-fi-1.png'
 import FederalLowFi2 from '../../assets/images/the-federal-store/low-fi-2.png'
 import FederalLowFi3 from '../../assets/images/the-federal-store/low-fi-3.png'
 
-import { link, path } from "framer-motion/client";
-
 export default function FederalStore(){
     return(
         <>
+        <Helmet>
+            <title>Federal Store Mobile Redesign Project | Zoey Huang's Portfolio</title>
+            <meta 
+                name="description" 
+                content="A case study in refining digital charm. Explore the thoughtful UX/UI redesign of Vancouver based cafe - The Federal Store's mobile site, a project focused on translating the warmth of a beloved Vancouver café into a seamless and intuitive ordering experience." 
+            />
+            <meta property="og:title" content="Federal Store Mobile Redesign Project | A UX Case Study by Zoey Huang" />
+            <meta property="og:description" content="Translating the warmth of a beloved Vancouver café - The Federal Store into a seamless digital experience. Explore the case study." />
+            <meta property="og:image" content={DribbleFederal} /> 
+            <meta property="og:url" content="https://www.itszoeyhuang.com/work/federal-store-redesign" />
+            <link rel="canonical" href="https://www.itszoeyhuang.com/work/federal-store-redesign" />
+        </Helmet>
         <div className="container">
             <Intro 
                 title="FEDERAL STORE MOBILE REDESIGN"

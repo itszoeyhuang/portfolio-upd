@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router";
 import ScrollToTop from "react-scroll-to-top";
 
@@ -21,6 +22,17 @@ import GiveWiseLowFi4 from '../../assets/images/givewise/lowfi-4.png'
 export default function GiveWise(){
     return(
         <>
+        <Helmet>
+            <title>GiveWise Budgeting App Design Project | Zoey Huang's Portfolio</title>
+                <meta 
+                    name="description" 
+                    content="More than a budget tracker—a tool for impact. Discover GiveWise, a UX/UI project designed to empower socially conscious millennials by elegantly merging smart financial management with seamless charitable giving." 
+                />
+                <meta property="og:title" content="GiveWise: Smart Budgeting, Seamless Giving | A UX Case Study" />
+                <meta property="og:description" content="A UX/UI project designed to empower socially conscious millennials by elegantly merging smart financial management with seamless charitable giving." />
+                <meta property="og:image" content={DribbleGiveWise} /> 
+                <meta property="og:url" content="https://www.itszoeyhuang.com/work/givewise" />
+        </Helmet>
         <Intro 
             title="GIVEWISE BUDGET TRACKING APP DESIGN"
             subtitle="Smart budgeting, seamless giving for everyone."
