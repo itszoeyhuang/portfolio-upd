@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet";
 import ScrollToTop from "react-scroll-to-top";
 import '../../../src/main.css'
 
@@ -23,6 +24,18 @@ import HifiDesktop from '../../assets/images/the-lunch-lady/hifi-desktop.jpg'
 export default function LunchLady(){
     return(
         <>
+        <Helmet>
+            <title>The Lunch Lady Website Redesign Project | Zoey Huang's Portfolio</title>
+            <meta 
+                name="description" 
+                content="A front-end development case study focused on restoring digital clarity. Discover how a mobile-first redesign transformed The Lunch Lady's cluttered website into an engaging and intuitive experience that reflects the Vancouver restaurant's vibrant character." 
+            />
+            <meta property="og:title" content="The Lunch Lady Website Redesign | A Front-End Case Study" />
+            <meta property="og:description" content="A case study in restoring digital clarity. Discover how a mobile-first redesign transformed a cluttered website into an engaging and intuitive experience." />
+            <meta property="og:image" content={DribbleLunchLady} /> 
+            <meta property="og:url" content="https://www.itszoeyhuang.com/work/the-lunch-lady" />
+            <link rel="canonical" href="https://www.itszoeyhuang.com/work/the-lunch-lady" />
+        </Helmet>
         <div className="container">
             <Intro 
                 title="THE LUNCH LADY WEBSITE REDESIGN"

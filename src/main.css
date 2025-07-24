@@ -118,7 +118,6 @@ body {
 .light-mode{
   color: #F6F2EC;
   background-color: #F33D22;
-  /* background-image: url(../src//assets//images/grainy-light.svg); */
 }
 
 .light-mode a:hover{

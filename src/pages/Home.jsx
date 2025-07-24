@@ -1,6 +1,7 @@
 import React, {} from 'react'
 import { Link } from 'react-router'
-import { Fade} from "react-awesome-reveal"
+import { Fade } from "react-awesome-reveal"
+import { Helmet } from 'react-helmet'
 import FlowingMenu from '../component/FlowingMenu'
 import ScrollToTop from "react-scroll-to-top";
 
@@ -27,14 +28,27 @@ const demoItems = [
 export default function Home(){
     return(
     <>
+    <Helmet>
+        <title> Zoey Huang - Creative Product Developer and Digital Marketing Specialist</title>
+        <meta 
+            name='description'
+            content='Explore Zoey Huang portfolio, a creative product developer and digital marketing specialist in Vancouver, blending high aesthetic and functionality in interactive design and user experience.'
+        />
+        <link 
+            rel='canonical'
+            href="https://www.itszoeyhuang.com"
+        />
+
+        <meta property="og:title" content="Zoey Huang Portfolio - Creative Product Developer" />
+        <meta property="og:description" content="A portfolio featuring ux/ui design projects, web-development projects, and digital marketing projects." />
+        <meta property="og:type" content="website" />
+
+        <meta property="og:url" content="https://www.itszoeyhuang.com" />
+        <link rel="canonical" href="https://www.itszoeyhuang.com" />
+    </Helmet>
     <GradientBackground />
        <div className="container">
         <div className="container-main">
-            {/* <div className="title">
-                <h3 className="mark1">"</h3>
-                <h3 className='title-hero'>Hi! I'm Zoey!</h3>
-                <h3 className="mark2">"</h3>
-            </div> */}
             <div className="hero-intro">
                 <Fade 
                     direction='left' 
@@ -42,16 +56,16 @@ export default function Home(){
                     duration={1000}
                 >
                     <div className="intro-line">
-                        <span className='emphasis'><h6>A UX UI Designer</h6></span>
+                        <span className='emphasis'><h6>A Product Developer</h6></span>
                         <span><h6>inspired by</h6></span>
                         <img src={ Line1 } alt='line-1-image' id='line-1-img' ></img>
-                        <span><h6>nature, and specialising</h6></span>
+                        <span><h6>nature and specialising</h6></span>
                     </div>
                     <div className="intro-line">
                         <span><h6>in interactive design</h6></span>
                         <img src={ Line2 } alt='line-2-image' id='line-2-img'></img>
                         <span><h6>and</h6></span>
-                        <span className='emphasis'><h6>user experience</h6></span>
+                        <span className='emphasis'><h6>user experience and digital marketing</h6></span>
                     </div>
                     <div className="intro-line">
                         <span><h6>I'm currently based in Vancouver.</h6></span>

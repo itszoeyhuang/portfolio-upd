@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet";
 import ScrollToTop from "react-scroll-to-top";
 
 import Intro from "../../component/project/Intro";
@@ -24,6 +25,18 @@ import PetUserFlow from '../../assets/images/pet-app/userflow.jpg'
 export default function PetApp(){
     return(
         <>
+        <Helmet>
+             <title>Pet Dating App Design Project | Zoey Huang's Portfolio</title>
+            <meta 
+                name="description" 
+                content="From personal experience to a community platform. This UX/UI case study explores the creation of a pet dating app designed to ease the awkwardness of finding playmates, fostering a safe and friendly community where every dog can find a friend." 
+            />
+            <meta property="og:title" content="A Pet Dating App | A UX/UI Case Study by Zoey Huang" />
+            <meta property="og:description" content="Inspired by personal experience, this app is designed to help dog owners connect and schedule safe, enjoyable playdates for their pets." />
+            <meta property="og:image" content={DribblePetApp} /> 
+            <meta property="og:url" content="https://www.itszoeyhuang.com/work/pet-app" />
+            <link rel="canonical" href="https://www.itszoeyhuang.com/work/pet-app" />
+        </Helmet>
         <Intro 
             title="THE PET DATING APP DESIGN"
             subtitle="A community where every dog finds a friend."

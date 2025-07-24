@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import ScrollToTop from "react-scroll-to-top";
 import DecryptedText from '../component/effects/DecryptedText'
 import Line from '../component/Line'
@@ -10,6 +11,20 @@ import '../global/About.css'
 export default function About(){
     return(
         <>
+        <Helmet>
+            <title> About Zoey Huang | Product Developer Portfolio</title>
+            <meta 
+                name="description" 
+                content="Learn about Zoey Huang, originally from Taiwan now a front-end developer based in Vancouver with a background in fashion and marketing. Zoey Huang is coming from a multicultural background, fluent in English, Mandarin, and Taiwanese. Zoey Huang passion for creativity and fashion led me to study fashion in Melbourne, Australia, and later pursue a career in retail and merchandising over the past few years." 
+            />
+
+            <meta property="og:title" content="About Zoey Huang | Product Developer Portfolio" />
+            <meta property="og:description" content="Learn about Zoey Huang, originally from Taiwan now a front-end developer based in Vancouver with a background in fashion and marketing. Zoey Huang is coming from a multicultural background, fluent in English, Mandarin, and Taiwanese. Zoey Huang passion for creativity and fashion led me to study fashion in Melbourne, Australia, and later pursue a career in retail and merchandising over the past few years." />
+            <meta property="og:image" content={ProfilePic} /> 
+            <meta property="og:url" content="https://www.itszoeyhuang.com/about" />
+            <link rel="canonical" href="https://www.itszoeyhuang.com/about" />
+        </Helmet>
+        
         <div className="container">
             <div className="about">
                 <div className="about-left">

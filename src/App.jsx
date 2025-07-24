@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'motion/react'
+import { Helmet } from 'react-helmet'
 import { Routes, Route } from 'react-router'
 
 import PageWrap from './global/PageWrap'
@@ -17,9 +18,27 @@ function App() {
 
   // Logic
 
-  // HTML~
+  // HTML
   return (
     <>
+    <Helmet>
+      <script type="application/ld+json">
+        {`
+          {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Zoey Huang",
+              "url": "https://www.itszoeyhuang.com",
+              "sameAs": [
+              "https://www.linkedin.com/in/itszoeyhuang/",
+              "https://github.com/itszoeyhuang",
+              "https://www.instagram.com/itszoeyhuang/"
+              ],
+              "email": "mailto:your-email@example.com"
+          }
+        `}
+      </script>
+    </Helmet>
       <Routes>
         <Route path="/" element={<PageWrap />}>
             <Route index element={<Home/>} />
