@@ -10,14 +10,21 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    padding-right: 1rem;
 }
 
 .intro_title h1{
-    word-spacing: 20px;
+    /* font-size: clamp(1.8rem, 4vw, 3.5rem); */
+    width: 100%;
+    height: auto;
+    word-spacing: 0.4rem;
     margin-bottom: 2rem;
+    line-height: 1.2;
 }
 
 .intro_title h5{
+    width: 100%;
+    height: auto;
     margin-bottom: 1.7rem;
 }
 
@@ -50,18 +57,48 @@
     flex-shrink: 0;
 }
 
-@media screen and (max-width: 576px){
+/* tablet */
+@media screen and (min-width: 1024px){
+
+}
+
+/* mobile */
+@media screen and (max-width: 768px){
+    .intro_title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .intro_title h1{
+        width: 90vw;
+        height: auto;
+    }
+    .intro_title h5{
+        width: 100vw;
+        height: auto;
+    }
+    .intro_content{
+        width: 80vw;
+        height: auto;
+    } 
     .project-intro{
         display: flex;
         flex-direction: column;
     }
-    .intro-title h1{
-        width: 10px;
+    .title_items{
+        width: 100vw;
         height: auto;
+        display: flex;
+        width: 100%;
     }
+    /* .intro-title {
+        width: 20%;
+        height: auto;
+    } */
     .project-dribble{
-        width: auto;
-        height: 35rem;
+        width: clamp(40%, 80vw, 100%);
+        height: auto;
         object-fit: cover;
     }
+
 }

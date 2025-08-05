@@ -3,6 +3,8 @@ import Line from "../Line";
 
 import '../project/TextBlock.css'
 
+
+
 export default function TextBlock({heading, content}){
     return(
         <>

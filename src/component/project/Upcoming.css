@@ -6,11 +6,11 @@
 }
 
 .projects-grid img{
-    width: 40rem;
+    width: 100vw;
     height: auto;
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 768px){
     .projects-grid{
         display: none;
     }

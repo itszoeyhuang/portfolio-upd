@@ -5,3 +5,12 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 768px){
+    .video-container{
+        max-width: 100vw;
+        height: auto;
+        margin: 0;
+        padding: 1.5rem 0;
+    }
+}

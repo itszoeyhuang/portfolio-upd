@@ -1,187 +1,167 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+
 import ScrollToTop from "react-scroll-to-top";
-import DecryptedText from '../component/effects/DecryptedText'
-import Line from '../component/Line'
+import ScrollVelocity from '../component/effects/ScrollVelocity';
+import ScrollReveal from "../component/effects/ScrollReveal";
+
 import ProfilePic from '../assets/images/profile-pic.jpg'
 
 import '../main.css'
 import '../global/About.css'
 
+const experienceData = [
+    {
+        role: 'Luxury Retail Associate',
+        company: 'MultiBrand Bouqitue',
+        location: 'Melbourne'
+    },
+    {
+        role: 'Fashion Merchandising Assistant',
+        company: 'Luxury Babywear',
+        location: 'Taipei'
+    },
+    {
+        role: 'Digital Marketing Specialist',
+        company: 'Vornado Taiwan',
+        location: 'Taipei'
+    },
+    {
+        role: 'Fashion Retail Ambassador',
+        company: 'Roden Gray',
+        location: 'Vancouver'
+    },
+    {
+        role: 'Creative Developer...',
+        company: 'Currently open and available',
+        location: ''
+    }
+];
+
+const connectData = [
+    {
+      title: 'Programming Language',
+      items: ['HTML, CSS, Javascript, ReactJs, TailwindCSS, WordPress, Shopify Liquid']
+    },
+    {
+      title: 'Visual Design',
+      items: ['Photoshop, Illustrator, InDesign, After Effect, Dimension']
+    },
+    {
+      title: 'User Design',
+      items: ['Figma']
+    },
+    {
+      title: 'Productivity Software',
+      items: ['Microsoft Word, Excel, Powerpoint']
+    },
+    {
+      title: 'Product Management',
+      items: ['Trello, Monday, Slack']
+    }
+];
+
 export default function About(){
     return(
         <>
         <Helmet>
-            <title> About Zoey Huang | Product Developer Portfolio</title>
+            <title> About Zoey Huang | Creative Developer Portfolio</title>
             <meta 
                 name="description" 
                 content="Learn about Zoey Huang, originally from Taiwan now a front-end developer based in Vancouver with a background in fashion and marketing. Zoey Huang is coming from a multicultural background, fluent in English, Mandarin, and Taiwanese. Zoey Huang passion for creativity and fashion led me to study fashion in Melbourne, Australia, and later pursue a career in retail and merchandising over the past few years." 
             />
 
             <meta property="og:title" content="About Zoey Huang | Product Developer Portfolio" />
-            <meta property="og:description" content="Learn about Zoey Huang, originally from Taiwan now a front-end developer based in Vancouver with a background in fashion and marketing. Zoey Huang is coming from a multicultural background, fluent in English, Mandarin, and Taiwanese. Zoey Huang passion for creativity and fashion led me to study fashion in Melbourne, Australia, and later pursue a career in retail and merchandising over the past few years." />
+            <meta property="og:description" content="Learn about Zoey Huang, originally from Taiwan now a creative developer based in Vancouver with a background in fashion and marketing. Zoey Huang is coming from a multicultural background, fluent in English, Mandarin, and Taiwanese. Zoey Huang passion for creativity and fashion led me to study fashion in Melbourne, Australia, and later pursue a career in retail and merchandising over the past few years." />
             <meta property="og:image" content={ProfilePic} /> 
             <meta property="og:url" content="https://www.itszoeyhuang.com/about" />
             <link rel="canonical" href="https://www.itszoeyhuang.com/about" />
         </Helmet>
         
         <div className="container">
-            <div className="about">
-                <div className="about-left">
-                    <div className="intro-line">
-                        <h2 id='mark1' >“</h2>
-                        <h2>
-                            <div style={{}}>
-                                <DecryptedText
-                                text="Hi! I'm Zoey!"
-                                speed={60}
-                                maxIterations={10}
-                                characters="ABCDEFGHIJKLMNOPQRSTUV123567890!@#$%^&*()_+<>?:\]["
-                                animateOn="view"
-                                revealDirection="start"
-                                parentClassName="all-letters"
-                                encryptedClassName="encrypted"
-                                sequential="false"
-                                />
-                            </div>
-                        </h2>
-                        <h2 id='mark2' >“</h2>
+                <div className="about-page-grid">
+                    <div className="grid-item full-width-marquee">
+                        <ScrollVelocity texts={['ABOUT ME']} velocity={-50} numCopies={15} />
                     </div>
-                    <img className='profile-pic' src={ ProfilePic } alt="Zoey Huang Profile Picture" id='profile' />
-                </div>
-                <div className="mobile-only">
-                    <Line width={500} color="#F6F2EC" />
-                        <div className="mobile-only_content">
-                            <a href="mailto:itszoeyhuang@gmail.com">
-                                <h6>EMAIL</h6>
-                            </a>
-                            <a href="https://drive.google.com/file/d/1cnI12W-kf_K7r_cZZ3B5WXGCy2FOweV-/view?usp=sharing">
-                                <h6>RESUME</h6>
-                            </a>
+                    <div className="grid-item grid-header-intro-left">
+                        <h1 className="title1">
+                            Crafting From
+                            <span className="emphasis">Fashion Marketing</span> 
+                            to <span className="emphasis_italic">Digital Design</span>
+                        </h1>
+                        <div className="grid-intro-image">
+                            <img src={ProfilePic} alt="Zoey Huang Profile" className="profile-pic" />
                         </div>
-                    <Line width={500} color="#F6F2EC" />
-                </div>
-                <div className="about-right">
-                    <div className="col-9">
-                        <div className="heading">
-                            <h1 className="about-title">
-                                <div style={{}}>
-                                    <DecryptedText
-                                    text="ABOUT ME"
-                                    speed={60}
-                                    maxIterations={10}
-                                    characters="ABCDEFGHIJKLMNOPQRSTUV123567890"
-                                    animateOn="view"
-                                    revealDirection="start"
-                                    parentClassName="all-letters"
-                                    encryptedClassName="encrypted"
-                                    sequential="false"
-                                    />
+                    </div>
+                    <div className="grid-item grid-header-intro-right">
+                        <h1 className="title2">
+                            Driving Brand
+                            <span className="emphasis">Visibility</span>
+                            and <span className="emphasis_italic">Digital Impact</span>
+                        </h1>
+                        <div className="grid-intro-text">
+                            <ScrollReveal>
+                                <p>Hello! Originally from Taiwan, currently based in Vancouver, B.C. Inspired by bold aesthetics and focusing on interactive design and digital marketing which led me to pursue as a creative developer.</p>
+                                <p>With strong background in fashion retail and digital marketing aspects, I enjoy combining high aesthetics & functionality to life.</p>
+                                <p>I discovered that designing and creating websites brings me a sense of peace, allowing me to immerse myself in a space that feels truly my own.</p>
+                            </ScrollReveal>
+                        </div>
+                    </div>
+                    
+                    <div className="grid-item full-width-marquee">
+                        <ScrollVelocity texts={["WHERE IVE BEEN"]} velocity={50} numCopies={15} />
+                    </div>
+                    <div className="grid-item grid-experience-text">
+                        <ScrollReveal>
+                           <p>Coming from a multicultural background, I’m fluent in English, Mandarin, and Taiwanese. My passion for creativity and fashion led me to study fashion merchandising in Melbourne, Australia, and later pursue a career in retail and digital marketing over the past few years</p>
+                           <br />
+                           <p>I aim to bridge the gap between creative vision and digital execution — building beautiful, functional websites that empower emerging brands, independent artists, and creatives to thrive online.</p>
+                           <br />
+                           <p>With a background in fashion retail and marketing, I bring both aesthetic and brand strategy into every project — from minimal e-commerce shops to experimental portfolios.</p>
+                        </ScrollReveal>
+                    </div>
+                    <div className="grid-item grid-experience-timeline">
+                        <div className="timeline-container">
+                            {experienceData.map((item, index) => (
+                                <div className="timeline-item" key={index}>
+                                    <div className="timeline-node"></div>
+                                    <div className="timeline-content">
+                                        <h5>{item.role}</h5>
+                                        <div className="timeline-details">
+                                            <p>{item.company}</p>
+                                            <p>{item.location}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </h1>
+                            ))}
                         </div>
-                        <div className="content">
-                            <p>Hello! Originally from Taiwan, currently based in Vancouver, B.C. I have always been drawn to creative aesthetics since I was a kid, which sparked my interest to design digitally and led me to pursue becoming a front-end developer.</p>
-                            <br />
-                            <p>I discovered that designing and creating websites brings me a sense of peace, allowing me to immerse myself in a space that feels truly my own.</p>
-                            <br />
-                            <p>A indoor plant collector and crazy in love with my 15 year old Maltese. 🐶</p>
-                        </div>
-                        <div className="heading">
-                            <h1 className="about-title">
-                            <div style={{ }}>
-                                <DecryptedText
-                                text="EXPERIENCE"
-                                speed={60}
-                                maxIterations={10}
-                                characters="ABCDEFGHIJKLMNOPQRSTUV123567890"
-                                animateOn="view"
-                                revealDirection="start"
-                                parentClassName="all-letters"
-                                encryptedClassName="encrypted"
-                                sequential="false"
-                                />
+                    </div>
+
+                    <div className="grid-item full-width-marquee">
+                        <ScrollVelocity texts={['FUTURE VISION']} velocity={-50} numCopies={15} />
+                    </div>
+                    <div className="grid-item grid-vision-text" id="vision-text">
+                        <ScrollReveal>
+                           <p>My goal is to build beautiful, functional websites, with a strong focus on e-commerce for emerging brands, creatives, and independent artists. I’m passionate about helping those with bold ideas but limited technical resources establish a powerful digital presence.</p>
+                           <br />
+                           <p>I want to be someone who helps turn ideas into interfaces — bridging the gap between vision and execution. Whether it’s a minimal e-commerce shop or an experimental digital portfolio.</p>
+                           <h5 className="vision-work-text">WORK</h5>
+                        </ScrollReveal>
+                    </div>
+                    <div className="grid-item grid-toolkit-list">
+                        <div className="connect-frame">
+                            <h1>TOOL KIT</h1>
+                            <div className="connect-list">
+                                {connectData.map((item, index) => (
+                                    <div className="toolkits-item" key={index}>
+                                        <h6>{item.title}</h6>
+                                        {item.items && <p>{item.items.join(', ')}</p>}
+                                    </div>
+                                ))}
                             </div>
-                            </h1>
-                        </div>
-                        <div className="content">
-                            <p>Coming from a multicultural background, I’m fluent in English, Mandarin, and Taiwanese. My passion for creativity and fashion led me to study fashion in Melbourne, Australia, and later pursue a career in retail and merchandising over the past few years.</p>
-                            <br />
-                            <p>Additionally, I gained valuable insights into consumer behaviour and visual storytelling which deepened my understanding of how aesthetics and functionality intersect.  This inspired me to focus on creating engaging user experience through tech-world.</p>
-                        </div>
-                        <div className="heading">
-                            <h1 className="about-title">
-                            <div style={{}}>
-                                <DecryptedText
-                                text="FUTURE VISION"
-                                speed={60}
-                                maxIterations={10}
-                                characters="ABCDEFGHIJKLMNOPQRSTUV123567890"
-                                animateOn="view"
-                                revealDirection="start"
-                                parentClassName="all-letters"
-                                encryptedClassName="encrypted"
-                                sequential="false"
-                                />
-                                </div>
-                            </h1>
-                        </div>
-                        <div className="content">
-                            <p>My goal is to build beautiful, functional websites, especially for small labels, creatives, and independent artists who need a strong online presence but might not have the technical resources to create one.</p>
-                            <br />
-                            <p>I want to be someone who helps turn ideas into interfaces — bridging the gap between vision and execution. Whether it’s a minimal e-commerce shop or an experimental digital portfolio.</p>
-                        </div>
-                        <div className="heading">
-                            <h1 className="about-title">
-                                <div style={{}}>
-                                    <DecryptedText
-                                    text="TOOL KITS"
-                                    speed={60}
-                                    maxIterations={10}
-                                    characters="ABCDEFGHIJKLMNOPQRSTUV123567890"
-                                    animateOn="view"
-                                    revealDirection="start"
-                                    parentClassName="all-letters"
-                                    encryptedClassName="encrypted"
-                                    sequential="false"
-                                    />
-                                </div>
-                            </h1>
-                        </div>
-                        <div className="content">
-                            <h6>Programming Language</h6> 
-                            <p>HTML, CSS, Javascript, ReactJs, TailwindCSS, WordPress</p>
-                            <br />
-                            <h6>Visual Design</h6>
-                            <p>Photoshop, Illustrator, InDesign, After Effect, Dimension</p>
-                            <br />
-                            <h6>User Design</h6>
-                            <p>Figma</p>
-                            <br />
-                            <h6>Productivity Software</h6>
-                            <p>Microsoft Word, Excel, Powerpoint</p>
-                        </div>
-                        <br />
-                        {/* Buttons */}
-                        <div className="about-btn">
-                            <button className="btn">
-                                <button className="email">
-                                <a href="mailto:itszoeyhuang@gmail.com">
-                                    <h6>EMAIL</h6>
-                                </a>
-                                </button>
-                            </button>
-                            <button className="btn">
-                                <button className="resume">
-                                    <a href="https://drive.google.com/file/d/1cnI12W-kf_K7r_cZZ3B5WXGCy2FOweV-/view?usp=sharing">
-                                        <h6>RESUME</h6>
-                                    </a>
-                                </button>
-                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
             <ScrollToTop 
                 smooth 
                 style={{

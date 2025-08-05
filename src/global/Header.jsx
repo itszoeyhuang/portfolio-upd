@@ -32,7 +32,7 @@ export default function Header() {
             transition={{ duration: 0.1, ease: 'linear' }} 
         >
             <div className="container">
-                <div className="grid">
+                <div className="grid" id='header'>
                     <div className="col-3" id="home-logos">
                         <Link to="/">
                             <img src={Logo} alt="Home Logo" id="z-logo" />

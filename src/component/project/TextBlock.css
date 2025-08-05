@@ -1,4 +1,21 @@
+/* #challenge-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
+}
+
 .challenge{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 3rem;
     width: 50rem;
     height: auto;
     display: flex;
@@ -8,14 +25,62 @@
     margin-bottom: 4rem;
 }
 
-#challenge-container{
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-}
-
 .challenge_content{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+@media only screen and (max-width: 768px){
+    .challenge{
+        width: 100%;
+        height: auto;
+    }
+} */
+
+#challenge-container {
+  width: 100%;
+  height: auto;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.challenge {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.challenge_content {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  #challenge-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .challenge_content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .challenge_content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 }

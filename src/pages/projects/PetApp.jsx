@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import { Helmet } from "react-helmet";
 import ScrollToTop from "react-scroll-to-top";
+import '../../../src/main.css'
 
 import Intro from "../../component/project/Intro";
 import Content from "../../component/project/Content";

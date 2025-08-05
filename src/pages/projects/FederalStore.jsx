@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Link } from 'react-router';
 import ScrollToTop from "react-scroll-to-top";
 import '../../../src/main.css'
+import './FederalStore.css'
 
 import Intro from "../../component/project/Intro";
 import Content from "../../component/project/Content";
@@ -29,6 +30,7 @@ import FederalSiteMap from '../../assets/images/the-federal-store/site-map.jpg'
 import FederalLowFi1 from '../../assets/images/the-federal-store/low-fi-1.png'
 import FederalLowFi2 from '../../assets/images/the-federal-store/low-fi-2.png'
 import FederalLowFi3 from '../../assets/images/the-federal-store/low-fi-3.png'
+import { cardClasses } from "@mui/material";
 
 export default function FederalStore(){
     return(
@@ -71,33 +73,33 @@ export default function FederalStore(){
                         "This redesign aimed to improve the mobile user experience and ultimately increase online orders by enhancing clarity, reducing friction, and making the site more engaging."
                     ]}
                 />
-                <div className="text-block">
+                {/* <div className="text-block"> */}
                     <TextBlock
                         heading="Challenge"
                         content={["The Federal Store’s website faces several challenges, including unclear information about product details and delivery/pickup options, and a complex checkout process that may lead to user frustration.","Additionally, the site struggles with outdated design, limited mobile optimisation, and missing real-time updates on product availability which are the main goal of redesigning. These issues surely limited user engagement features and potentially impacting customer satisfaction."]}
                     />
-                    <p>Screenshots of Original Mobile Ordering Site</p>
+                    <p className="container" id="wireframe_title">Screenshots of Original Mobile Ordering Site</p>
                     <Wireframes
                     images={[
-                        { src: FederalCurrent1, alt:"The Federal Store Current Site",caption: "Home Page"},
-                        { src: FederalCurrent2, alt:"The Federal Store Current Site",caption: "Product Category"},
-                        { src: FederalCurrent3, alt:"The Federal Store Current Site",caption: "Product Detail"},
-                        { src: FederalCurrent4, alt:"The Federal Store Current Site",caption: "Following Content"},
-                        { src: FederalCurrent5, alt:"The Federal Store Current Site",caption: "Cart"},
+                        { src: FederalCurrent1, alt:"The Federal Store Current Site",caption: "Home Page", className:"vertical-image", cardClass:'vertical'},
+                        { src: FederalCurrent2, alt:"The Federal Store Current Site",caption: "Product Category", className:"vertical-image", cardClass:'vertical'},
+                        { src: FederalCurrent3, alt:"The Federal Store Current Site",caption: "Product Detail", className:"vertical-image", cardClass:'vertical'},
+                        { src: FederalCurrent4, alt:"The Federal Store Current Site",caption: "Following Content", className:"vertical-image", cardClass:'vertical'},
+                        { src: FederalCurrent5, alt:"The Federal Store Current Site",caption: "Cart", className:"vertical-image", cardClass:'vertical'},
                     ]}
                 />
-                </div>
+                {/* </div> */}
                 <Content
                     heading="Information Architecture & User Flow"
                     content={[
                         "To effectively represent the cake categorisation and better information architecture, I have created an user flow that illustrates how customers would like to purchase the pastry. By understanding the goal, a clear revised sitemap was made."
                     ]}
                 />
-                <p>User Flow & Site Map</p>
+                <p className="container" id="wireframe_title">User Flow & Site Map</p>
                 <Wireframes
                     images={[
-                        { src: FederalUserFlow, alt:"The Federal Store User Flow",id:"federal-user-flow"},
-                        { src: FederalSiteMap, alt:"The Federal Store Site Map",id:"federal-site-map"}
+                        { src: FederalUserFlow, alt:"The Federal Store User Flow",id:"federal-user-flow", className:"horizontal-image"},
+                        { src: FederalSiteMap, alt:"The Federal Store Site Map",id:"federal-site-map", className:"horizontal-image"}
                     ]}
                 />
                 <Content
@@ -108,22 +110,22 @@ export default function FederalStore(){
                         "The redesign shows clear cake categorisation by flavours with filter option implemented, also enhanced with icons and infographics. The wireframes aim to reduce excessive scrolling and actions like adding item to the cart etc."
                     ]}
                 />
-                <p>Low-fidelity Wireframes</p>
+                <p className="container" id="wireframe_title">Low-fidelity Wireframes</p>
                 <Wireframes 
                     images={[
-                        { src: FederalLowFi1, alt:"The Federal Store Low Fi Wireframe",id:"federal-lowfi-1"},
-                        { src: FederalLowFi2, alt:"The Federal Store Low Fi Wireframe",id:"federal-lowfi-2"},
-                        { src: FederalLowFi3, alt:"The Federal Store Low Fi Wireframe",id:"federal-lowfi-3"},
+                        { src: FederalLowFi1, alt:"The Federal Store Low Fi Wireframe",id:"federal-lowfi-1", className:"horizontal-image"},
+                        { src: FederalLowFi2, alt:"The Federal Store Low Fi Wireframe",id:"federal-lowfi-2", className:"horizontal-image"},
+                        { src: FederalLowFi3, alt:"The Federal Store Low Fi Wireframe",id:"federal-lowfi-3", className:"horizontal-image"},
                     ]}
                 />
-                <p>Hi-fidelity Wireframes</p>
+                <p className="container" id="wireframe_title">Hi-fidelity Wireframes</p>
                 <Wireframes 
                     images={[
-                        { src: FederalWireframe1, alt:"The Federal Store Wireframe",id:"federal-wireframe-1"},
-                        { src: FederalWireframe2, alt:"The Federal Store Wireframe",id:"federal-wireframe-2"},
-                        { src: FederalWireframe3, alt:"The Federal Store Wireframe",id:"federal-wireframe-3"},
-                        { src: FederalWireframe4, alt:"The Federal Store Wireframe",id:"federal-wireframe-4"},
-                        { src: FederalWireframe5, alt:"The Federal Store Wireframe",id:"federal-wireframe-5"}
+                        { src: FederalWireframe1, alt:"The Federal Store Wireframe",id:"federal-wireframe-1", className:"vertical-image", cardClass:'vertical'},
+                        { src: FederalWireframe2, alt:"The Federal Store Wireframe",id:"federal-wireframe-2", className:"vertical-image", cardClass:'vertical'},
+                        { src: FederalWireframe3, alt:"The Federal Store Wireframe",id:"federal-wireframe-3", className:"vertical-image", cardClass:'vertical'},
+                        { src: FederalWireframe4, alt:"The Federal Store Wireframe",id:"federal-wireframe-4", className:"vertical-image", cardClass:'vertical'},
+                        { src: FederalWireframe5, alt:"The Federal Store Wireframe",id:"federal-wireframe-5", className:"vertical-image", cardClass:'vertical'}
                     ]}
                 />
                 <Content
