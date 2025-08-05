@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router';
 import { gsap } from 'gsap';
 import './FlowingMenu.css';
 
@@ -96,7 +97,7 @@ export default function FlowingMenu() {
             <span className="menu__item-link" href={project.link}>{project.text}</span>
 
             <div className="project-description">
-              <a href={project.link} style={{ display: 'flex', justifyContent:'center', width: '100%', height: '100%' }}>
+              <Link to={project.link} style={{ display: 'flex', justifyContent:'center', width: '100%', height: '100%' }}>
                 <div className="project-description-content">
                   <div className="project-description-text">
                     <h4>{project.role}</h4> 
@@ -106,7 +107,7 @@ export default function FlowingMenu() {
                       <img src={project.image} alt={project.text} />
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </a>
         ))}
