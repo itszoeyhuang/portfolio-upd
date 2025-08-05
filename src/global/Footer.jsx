@@ -10,25 +10,25 @@ export default function Footer(){
         {
             icon: <FaLinkedin  size={"18"}/>,
             label: 'LinkedIn',
-            onClick: () => alert("Linkedin"),
+            // onClick: () => alert("Linkedin"),
             onClick: () => window.open("https://www.linkedin.com/in/itszoeyhuang/")
         },
         {
             icon: <FaGithub  size={"18"}/>,
             label: 'GitHub',
-            onClick: () => alert("Github"),
+            // onClick: () => alert("Github"),
             onClick: () => window.open("https://github.com/itszoeyhuang")
         },
         {
             icon: <FaInstagram  size={"18"}/>,
             label: 'Instagram',
-            onClick: () => alert("Instagram"),
+            // onClick: () => alert("Instagram"),
             onClick: () => window.open("https://www.instagram.com/itszoeyhuang/")
         },
         {
             icon: <MdOutlineEmail  size={"18"}/>,
             label: 'Mail Me!',
-            onClick: () => alert("Mail Me!"),
+            // onClick: () => alert("Mail Me!"),
             onClick: () => window.open("mailto:itszoeyhuang@gmail.com")
         },
     ];

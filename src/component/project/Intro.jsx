@@ -24,7 +24,8 @@ export default function Intro({ title, subtitle, content, roleTitle, roleItems, 
                         )}
                     </div>
                     <div className="title_items">
-                        <div className="intro_solution">
+                        <div className="intro_line1">
+                            <div className="intro_solution">
                             <h6>{roleTitle}</h6>
                             <ul>
                                 {roleItems.map((item, index) => (
@@ -33,26 +34,29 @@ export default function Intro({ title, subtitle, content, roleTitle, roleItems, 
                                     </li>
                                 ))}
                             </ul>
+                            </div>
+                            <div className="intro_solution">
+                                <h6>{listTitle}</h6>
+                                <ul>
+                                    {listItems.map((item, index) => (
+                                        <li key={index}>
+                                            <p>{item}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className="intro_solution">
-                            <h6>{listTitle}</h6>
-                            <ul>
-                                {listItems.map((item, index) => (
-                                    <li key={index}>
-                                        <p>{item}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="intro_solution">
-                            <h6>{durationTitle}</h6>
-                            <ul>
-                                {durationItems.map((item, index) => (
-                                    <li key={index}>
-                                        <p>{item}</p>
-                                    </li>
-                                ))}
-                            </ul>
+                        <div className="intro_line2">
+                            <div className="intro_solution">
+                                <h6>{durationTitle}</h6>
+                                <ul>
+                                    {durationItems.map((item, index) => (
+                                        <li key={index}>
+                                            <p>{item}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

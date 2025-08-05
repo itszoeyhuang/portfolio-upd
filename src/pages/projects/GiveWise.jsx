@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router";
 import ScrollToTop from "react-scroll-to-top";
+import '../../../src/main.css'
 
 import Intro from "../../component/project/Intro";
 import Content from "../../component/project/Content";
@@ -63,20 +64,23 @@ export default function GiveWise(){
             "Most of the research and design work was conducted using Figma. The structure was designed to facilitate easy navigation, allowing users to link bank accounts, track expenses, and manage charitable donations within our wireframe."
         ]}
         />
+        <p className="container" id="wireframe_title">Content Architecture</p>
         <Wireframes 
             images={[
-                { src: GiveWiseNavBar, alt:"GiveWise App Navigation Bar", caption: "Navigation Bar"},
-                { src: GiveWiseSiteMap, alt:"GiveWise App Site Map", caption: "Site Map"},
+                { src: GiveWiseNavBar, alt:"GiveWise App Navigation Bar", caption: "Navigation Bar", className:'horizontal-image'},
+                { src: GiveWiseSiteMap, alt:"GiveWise App Site Map", caption: "Site Map",className:'horizontal-image'},
             ]}
         />
+        <p className="container" id="wireframe_title">Low Fidelity Wireframe</p>
         <Wireframes 
             images={[
-                { src: GiveWiseLowFi1, alt:"GiveWise App Wireframe", caption: "Home Page"},
-                { src: GiveWiseLowFi2, alt:"GiveWise App Wireframe", caption: "Profile Page"},
-                { src: GiveWiseLowFi3, alt:"GiveWise App Wireframe", caption: "Profile Tracking Page"},
-                { src: GiveWiseLowFi4, alt:"GiveWise App Wireframe", caption: "Donation Page"},
+                { src: GiveWiseLowFi1, alt:"GiveWise App Wireframe", caption: "Home Page", className:'vertical-image', cardClass:'vertical'},
+                { src: GiveWiseLowFi2, alt:"GiveWise App Wireframe", caption: "Profile Page", className:'horizontal-image'},
+                { src: GiveWiseLowFi3, alt:"GiveWise App Wireframe", caption: "Profile Tracking Page", className:'horizontal-image'},
+                { src: GiveWiseLowFi4, alt:"GiveWise App Wireframe", caption: "Donation Page",className:'vertical-image', cardClass:'vertical'},
             ]}
         />
+        <p className="container" id="wireframe_title">Final Illustration</p>
         <Video src={VideoGiveWise}/>
         <Content 
             heading="Wireframe & Implementation"

@@ -1,7 +1,6 @@
-import { useEffect, useRef, useMemo } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 import './ScrollReveal.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,27 +13,17 @@ const ScrollReveal = ({
   baseRotation = 3,
   blurStrength = 4,
   containerClassName = "",
-  textClassName = "",
   rotationEnd = "bottom bottom",
   wordAnimationEnd = "bottom bottom"
 }) => {
   const containerRef = useRef(null);
 
-  const splitText = useMemo(() => {
-    const text = typeof children === 'string' ? children : '';
-    return text.split(/(\s+)/).map((word, index) => {
-      if (word.match(/^\s+$/)) return word;
-      return (
-        <span className="word" key={index}>
-          {word}
-        </span>
-      );
-    });
-  }, [children]);
-
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+
+    const targets = gsap.utils.toArray(el.children).filter(child => child.tagName !== 'BR');
+    if (targets.length === 0) return;
 
     const scroller =
       scrollContainerRef && scrollContainerRef.current
@@ -57,15 +46,13 @@ const ScrollReveal = ({
       }
     );
 
-    const wordElements = el.querySelectorAll('.word');
-
     gsap.fromTo(
-      wordElements,
+      targets, 
       { opacity: baseOpacity, willChange: 'opacity' },
       {
         ease: 'none',
         opacity: 1,
-        stagger: 0.05,
+        stagger: 0.2, 
         scrollTrigger: {
           trigger: el,
           scroller,
@@ -78,12 +65,12 @@ const ScrollReveal = ({
 
     if (enableBlur) {
       gsap.fromTo(
-        wordElements,
+        targets, 
         { filter: `blur(${blurStrength}px)` },
         {
           ease: 'none',
           filter: 'blur(0px)',
-          stagger: 0.05,
+          stagger: 0.1,
           scrollTrigger: {
             trigger: el,
             scroller,
@@ -98,12 +85,12 @@ const ScrollReveal = ({
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, [scrollContainerRef, enableBlur, baseRotation, baseOpacity, rotationEnd, wordAnimationEnd, blurStrength]);
+  }, [scrollContainerRef, enableBlur, baseRotation, baseOpacity, rotationEnd, wordAnimationEnd, blurStrength, children]);
 
   return (
-    <h2 ref={containerRef} className={`scroll-reveal ${containerClassName}`}>
-      <p className={`scroll-reveal-text ${textClassName}`}>{splitText}</p>
-    </h2>
+    <div ref={containerRef} className={`scroll-reveal ${containerClassName}`}>
+      {children}
+    </div>
   );
 };
 

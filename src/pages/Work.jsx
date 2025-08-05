@@ -23,7 +23,7 @@ export default function Work(){
     return(
         <>
         <Helmet>
-            <title>Work and Projects | Zoey Huang - Product Developer Portfolio</title>
+            <title>Work and Projects | Zoey Huang - Creative Developer Portfolio</title>
             <meta 
                 name="description" 
                 content="Explore projects by Zoey Huang from the New Media and Web Design Program at BCIT, including mobile redesigns, web development, app design and more." 
@@ -58,7 +58,7 @@ export default function Work(){
             </div>
             <div className="project-overview">
             <ProjectItemA
-                order="01"
+                order="I"
                 images={[
                     { src: IntroFederal, alt: "The Federal Store Intro Image", id: "intro-federal"},
                     { src: DribbleFederal, alt: "The Federal Store Dribble Image", id: "dribble-federal"}
@@ -72,7 +72,7 @@ export default function Work(){
                 <Line color="#F6F2EC" />
             </div>
             <ProjectItemB
-                order="02"
+                order="I I"
                 images={[
                     { src: IntroLunchLady, alt: "The Lunch Lady Intro Image", id: "intro-lunchlady"},
                     { src: DribbleLunchLady, alt: "The Lunch Lady Dribble Image", id: "dribble-lunchlady"}
@@ -84,7 +84,7 @@ export default function Work(){
             />
             <Line width={1257} color="#F6F2EC" />
             <ProjectItemA 
-                order="03"
+                order="I I I"
                 images={[
                     { src: IntroPetApp, alt:"The Pet Dating App Intro Image", id:"intro-pet-app"},
                     { src: DribblePetApp, alt:"The Pet Dating App Dribble Image", id:"dribble-pet-app"}
@@ -96,7 +96,7 @@ export default function Work(){
             />
             <Line width={1257} color="#F6F2EC" />
             <ProjectItemB 
-                order="05"
+                order="I V"
                 images={[
                     { src: DribbleGiveWise, alt:"Givewise Budgeting App Dribble Image", id:"dribble-givewise"},
                     { src: IntroGiveWise, alt:"Givewise Budgeting App Intro Image", id:"intro-givewise"},

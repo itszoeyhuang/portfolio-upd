@@ -29,7 +29,7 @@ export default function Home(){
     return(
     <>
     <Helmet>
-        <title> Zoey Huang - Creative Product Developer and Digital Marketing Specialist</title>
+        <title> Zoey Huang - Creative Developer and Digital Marketing Specialist</title>
         <meta 
             name='description'
             content='Explore Zoey Huang portfolio, a creative product developer and digital marketing specialist in Vancouver, blending high aesthetic and functionality in interactive design and user experience.'
@@ -39,7 +39,7 @@ export default function Home(){
             href="https://www.itszoeyhuang.com"
         />
 
-        <meta property="og:title" content="Zoey Huang Portfolio - Creative Product Developer" />
+        <meta property="og:title" content="Zoey Huang Portfolio - Creative Developer" />
         <meta property="og:description" content="A portfolio featuring ux/ui design projects, web-development projects, and digital marketing projects." />
         <meta property="og:type" content="website" />
 
@@ -50,45 +50,42 @@ export default function Home(){
        <div className="container">
         <div className="container-main">
             <div className="hero-intro">
-                <Fade 
-                    direction='left' 
-                    cascade
-                    duration={1000}
-                >
-                    <div className="intro-line">
-                        <span className='emphasis'><h6>A Product Developer</h6></span>
-                        <span><h6>inspired by</h6></span>
-                        <img src={ Line1 } alt='line-1-image' id='line-1-img' ></img>
-                        <span><h6>nature and specialising</h6></span>
-                    </div>
-                    <div className="intro-line">
-                        <span><h6>in interactive design</h6></span>
-                        <img src={ Line2 } alt='line-2-image' id='line-2-img'></img>
-                        <span><h6>and</h6></span>
-                        <span className='emphasis'><h6>user experience and digital marketing</h6></span>
-                    </div>
-                    <div className="intro-line">
-                        <span><h6>I'm currently based in Vancouver.</h6></span>
-                        <img src={ Line3 } alt='line-3-image' id='line-3-img'></img>
-                        <span><h6>With a background in</h6></span>
-                    </div>
-                    <div className="intro-line">
-                        <span><h6>fashion and marketing,</h6></span>
-                        <img src={ Line4 } alt='line-4-image' id='line-4-img'></img>
-                    </div>
-                    <div className="intro-line">
-                        <span><h6>I enjoy combining</h6></span>
-                        <span className='emphasis'><h6>high aesthetic</h6></span>
-                        <span><h6>and</h6></span>
-                        <span className='emphasis'><h6>functionality</h6></span>
-                        <span><h6>to life.</h6></span>
-                    </div>
-                </Fade>
+                <div className="hero-intro-text">
+                    <Fade 
+                        direction='left' 
+                        cascade
+                        duration={1000}
+                    >
+                        <div className="intro-line">
+                            <span className='emphasis'><h6>A Creative Developer</h6></span>
+                            <span><h6>crafting</h6></span>
+                            <img src={ Line1 } alt='line-1-image' id='line-1-img' ></img>
+                            <span><h6>bold, expressive websites.</h6></span>
+                        </div>
+                        <div className="intro-line">
+                            <span><h6>Rooted in Fashion Marketing and Merchandising</h6></span>
+                            <img src={ Line2 } alt='line-2-image' id='line-2-img'></img>
+                            <span><h6>now</h6></span>
+                            <span className='emphasis'><h6>fluent in digital design.</h6></span>
+                        </div>
+                        <div className="intro-line">
+                            <span><h6>Currently based in Vancouver, orginally from Taiwan.</h6></span>
+                            <img src={ Line3 } alt='line-3-image' id='line-3-img'></img>
+                            <span><h6>Specialising in interactive design, e-commerce, and story telling.</h6></span>
+                        </div>
+                        <div className="intro-line">
+                            <span><h6>Blending</h6></span>
+                            <span className='emphasis'><h6>high aesthetic</h6></span>
+                            <img src={ Line4 } alt='line-4-image' id='line-4-img'></img>
+                            <span><h6>with</h6></span>
+                            <span className='emphasis'><h6>purposeful functionality</h6></span>
+                            <span><h6>for emeging labels.</h6></span>
+                        </div>
+                    </Fade>
+                </div>
                 <Link to='/about'>
-                    <button className="btn">
-                        <button className="email">
+                    <button className="btn-email">
                             <h6>About Me</h6>
-                        </button>
                     </button>
                 </Link>
             </div>

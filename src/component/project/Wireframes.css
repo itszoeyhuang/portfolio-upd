@@ -1,4 +1,4 @@
-.wireframe-section{
+/* .wireframe-section{
     padding: 2rem;
 }
 .wireframe-grid{
@@ -6,18 +6,22 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .wireframe-card {
-  width: 280px;
+  width: 100%;
+  height: 300px;
   text-align: center;
+  flex: 1 1 250px;
 }
 
 .wireframe-image {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
   border-radius: 8px;
+  background-color: #f0f0f0;
 }
 
 .wireframe-caption {
@@ -37,14 +41,111 @@
     margin: 2rem 0;
 } */
 
-@media screen and (max-width: 576px){
-    .wireframe-image{
-        display: inline;
-    }
-    .wireframe-image img{
-        display: flex;
-        width: auto;
-        height: auto;
-        padding: 1rem 0;
-    }
+/* @media only screen and (max-width: 768px){
+  .wireframe-grid{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .wireframe-card{
+    max-width: 100%;
+  }
+  .wireframe-image{
+      display: inline;
+      width: 100%;
+      height: auto;
+  }
+  .wireframe-image img{
+      display: flex;
+      width: auto;
+      height: auto;
+      padding: 1rem 0;
+  }
+} */
+
+.wireframe-section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.wireframe-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.wireframe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.wireframe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: zoom-in;
+}
+
+.wireframe-image {
+  width: 100%;
+  height: 18rem;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.wireframe-card:hover .wireframe-image {
+  transform: scale(1.4);
+  z-index: 5;
+}
+
+.wireframe-caption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #F6F2EC;
+}
+
+@media (max-width: 768px) {
+  .wireframe-grid {
+    display: flex; 
+    padding: 0;
+    margin: 0;
+  }
+
+  .wireframe-card.vertical {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0 auto;
+    border-radius: 0;
+    display: block;
+  }
+
+  .vertical-image {
+    width: 100vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .horizontal-image {
+    width: auto;
+    max-width: 100%;
+    max-height: 240px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .wireframe-caption {
+    /* width: 100vw; */
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
 }
