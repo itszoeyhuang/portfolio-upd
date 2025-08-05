@@ -29,7 +29,13 @@
 }
 
 #vision-text{
-    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 25vh;
+}
+
+.vision-work-text{
+    margin-left: 80%;
 }
 
 .grid-header-intro-left, .grid-header-intro-right {
