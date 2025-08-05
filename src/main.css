@@ -314,8 +314,9 @@ body {
   .mobile-only_content {
     display: flex;
     align-items: center;
-    /* gap: 1.25rem; */
     padding: 0.8rem;
+    gap: 2rem;
+    justify-content: center;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
