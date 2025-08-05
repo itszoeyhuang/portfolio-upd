@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router";
 
 import ScrollToTop from "react-scroll-to-top";
 import ScrollVelocity from '../component/effects/ScrollVelocity';
@@ -145,8 +146,10 @@ export default function About(){
                            <p>My goal is to build beautiful, functional websites, with a strong focus on e-commerce for emerging brands, creatives, and independent artists. I’m passionate about helping those with bold ideas but limited technical resources establish a powerful digital presence.</p>
                            <br />
                            <p>I want to be someone who helps turn ideas into interfaces — bridging the gap between vision and execution. Whether it’s a minimal e-commerce shop or an experimental digital portfolio.</p>
-                           <h5 className="vision-work-text">WORK</h5>
                         </ScrollReveal>
+                        <Link to='/about'>
+                           <h5 className="vision-work-text">WORK</h5>
+                        </Link>
                     </div>
                     <div className="grid-item grid-toolkit-list">
                         <div className="connect-frame">
