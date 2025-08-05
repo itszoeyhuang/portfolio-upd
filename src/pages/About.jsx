@@ -204,7 +204,7 @@ export default function About(){
                            <br />
                            <p>I want to be someone who helps turn ideas into interfaces — bridging the gap between vision and execution. Whether it’s a minimal e-commerce shop or an experimental digital portfolio.</p>
                         </ScrollReveal>
-                        <Link to='/about'>
+                        <Link to='/work'>
                            <h5 className="vision-work-text">WORK</h5>
                         </Link>
                     </div>
