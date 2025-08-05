@@ -15,16 +15,19 @@
     border-left: 1px solid rgba(246, 242, 236, 0.2);
 }
 
-.full-width-marquee,
 .grid-experience-text,
+.grid-hobbie-text
 .grid-experience-timeline,
 .grid-vision-text,
 .grid-toolkit-list {
     border-top: 1px solid rgba(246, 242, 236, 0.2);
 }
 
+.grid-hobbie-text{
+    margin: auto 0;
+}
+
 .full-width-marquee {
-    grid-column: 1 / -1; 
     padding: 0; 
 }
 
@@ -77,12 +80,13 @@
 }
 .profile-pic {
     width: 100%;
-    max-width: 400px;
+    max-width: 30rem;
     height: auto;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     border-radius: 1rem;
 }
+
 .grid-intro-text{
     margin-top: 8rem;
 }
@@ -155,6 +159,10 @@
 }
 .connect-list a:hover { opacity: 0.7; }
 
+.behind-the-screen-image{
+    width: auto;
+    height: 40vh;
+}
 .toolkits-list {
     display: flex;
     flex-direction: column;
@@ -171,6 +179,24 @@
     opacity: 0.8;
     line-height: 1.6;
     word-spacing: 0.2em;
+}
+.road-style-divider {
+    grid-column: 1 / -1;
+    position: relative;
+    padding: 1.5rem 0; 
+    border-top: 1px solid rgba(246, 242, 236, 0.2);
+    border-bottom: 1px solid rgba(246, 242, 236, 0.2);
+    overflow: hidden; 
+}
+
+.road-style-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
 }
 
 @media (max-width: 1024px) {
