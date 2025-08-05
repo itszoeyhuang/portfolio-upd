@@ -5,8 +5,13 @@ import { Link } from "react-router";
 import ScrollToTop from "react-scroll-to-top";
 import ScrollVelocity from '../component/effects/ScrollVelocity';
 import ScrollReveal from "../component/effects/ScrollReveal";
+import StickerPeel from "../component/effects/StickerPeel";
 
 import ProfilePic from '../assets/images/profile-pic.jpg'
+import DogPic from '../assets/images/polaroid/dan-dan.png'
+import MelbournePic from '../assets/images/polaroid/melbourne-2.png'
+import PolaroidPic from '../assets/images/polaroid/polaroid.png'
+import TaipeiPic from '../assets/images/polaroid/taipei.png'
 
 import '../main.css'
 import '../global/About.css'
@@ -81,7 +86,7 @@ export default function About(){
         
         <div className="container">
                 <div className="about-page-grid">
-                    <div className="grid-item full-width-marquee">
+                    <div className="road-style-divider">
                         <ScrollVelocity texts={['ABOUT ME']} velocity={-50} numCopies={15} />
                     </div>
                     <div className="grid-item grid-header-intro-left">
@@ -109,7 +114,7 @@ export default function About(){
                         </div>
                     </div>
                     
-                    <div className="grid-item full-width-marquee">
+                    <div className="road-style-divider">
                         <ScrollVelocity texts={["WHERE IVE BEEN"]} velocity={50} numCopies={15} />
                     </div>
                     <div className="grid-item grid-experience-text">
@@ -137,8 +142,60 @@ export default function About(){
                             ))}
                         </div>
                     </div>
-
-                    <div className="grid-item full-width-marquee">
+                    <div className="road-style-divider">
+                        <ScrollVelocity texts={["BEHIND THE SCREEN"]} velocity={50} numCopies={15} />
+                    </div>
+                    <div className="grid-item grid-hobbie-text">
+                        <ScrollReveal>
+                           <p>When I’m behind my screen, I’m probably cuddling my 16-year-old Maltese (he’s basically my boss).</p>
+                           <br />
+                           <p>I’m a total matcha addict, a slightly obsessed indoor plant collector, and someone who genuinely enjoys the little joys of retail—like shopping and having casual conversations with all kinds of customers. Honestly, that’s always been the most fun part of working in fashion retail for me.</p>
+                        </ScrollReveal>
+                    </div>
+                    <div className="behind-the-screen-image">
+                        <StickerPeel
+                            imageSrc={DogPic}
+                            width={160}
+                            rotate={360}
+                            peelBackHoverPct={15}
+                            peelBackActivePct={30}
+                            shadowIntensity={0}
+                            lightingIntensity={0.1}
+                            initialPosition={{ x: 125, y: 80 }}
+                        />
+                        <StickerPeel 
+                            imageSrc={MelbournePic}
+                            width={160}
+                            rotate={360}
+                            peelBackHoverPct={20}
+                            peelBackActivePct={40}
+                            shadowIntensity={0}
+                            lightingIntensity={0.1}
+                            initialPosition={{ x: 330, y: 40 }}
+                        />
+                        <StickerPeel 
+                            imageSrc={PolaroidPic}
+                            width={160}
+                            rotate={360}
+                            peelBackHoverPct={20}
+                            peelBackActivePct={40}
+                            shadowIntensity={0}
+                            lightingIntensity={0.1}
+                            initialPosition={{ x: 550, y: 60 }}
+                        />
+                        <StickerPeel 
+                            imageSrc={TaipeiPic}
+                            width={160}
+                            rotate={360}
+                            peelBackHoverPct={20}
+                            peelBackActivePct={40}
+                            shadowIntensity={0}
+                            lightingIntensity={0.1}
+                            initialPosition={{ x: 750, y: 100 }}
+                        />
+                        <h6>Drag Me!</h6>
+                    </div>
+                    <div className="road-style-divider">
                         <ScrollVelocity texts={['FUTURE VISION']} velocity={-50} numCopies={15} />
                     </div>
                     <div className="grid-item grid-vision-text" id="vision-text">
