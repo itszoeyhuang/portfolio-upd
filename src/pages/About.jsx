@@ -204,9 +204,14 @@ export default function About(){
                            <br />
                            <p>I want to be someone who helps turn ideas into interfaces — bridging the gap between vision and execution. Whether it’s a minimal e-commerce shop or an experimental digital portfolio.</p>
                         </ScrollReveal>
-                        <Link to='/work'>
-                           <h5 className="vision-work-text">WORK</h5>
-                        </Link>
+                        <div className="vision-work-text">
+                            <Link to='/work'>
+                                <h5>WORK</h5>
+                            </Link>
+                            <a href="https://drive.google.com/file/d/1cnI12W-kf_K7r_cZZ3B5WXGCy2FOweV-/view?usp=sharing">
+                                <h5>DOWNLOAD CV</h5>
+                            </a>
+                        </div>
                     </div>
                     <div className="grid-item grid-toolkit-list">
                         <div className="connect-frame">
